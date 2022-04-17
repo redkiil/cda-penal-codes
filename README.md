@@ -21,13 +21,18 @@ https://dotnet.microsoft.com/en-us/download
 Faça o download do projeto,
 
 ```cmd
-git clone 
+git clone https://github.com/redkiil/cda-penal-codes
 ```
 
 Crie um banco de dados com nome `CDA` em seu banco de dados MySQL.
 
 Edite a Linha `79` do Arquivo `Program.cs` , e coloque as credencias do seu banco.
 
+Rode as Migrations, para popular os dados iniciais.
+
+```
+dotnet ef database update
+```
 
 Entre na pasta raiz do projeto, abre um CMD e execute.
 
@@ -36,14 +41,8 @@ dotnet run
 ```
 Aguarde o projeto ser buildado e executado!
 
-Rode as Migrations, para popular os dados iniciais.
-
-```
-dotnet ef update database
-```
-
 Caso não abra o Swagger automaticamente entre no Link
 
 ```
-http://localhost:5001/swagger
+https://localhost:7255/swagger
 ```
